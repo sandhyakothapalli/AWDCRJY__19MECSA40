@@ -1,0 +1,23 @@
+import java.io.*;
+class Even
+{
+    public static void main(String args[])
+    {
+      int a=5,b=10;
+      System.out.println("before swap");
+      System.out.println("a:"+a);
+      System.out.println("b:"+b);
+      a=a+b;
+      b=a-b;
+      a=a-b;
+       System.out.println("after swap");
+       System.out.println("a:"+a);
+       System.out.println("b:"+b);
+    }
+}
+output:
+before swapa:5
+b:10
+after swap
+a:10
+b:5
