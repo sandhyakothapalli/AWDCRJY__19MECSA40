@@ -1,0 +1,21 @@
+ class Digits
+{
+	public static void main(String[] args) {
+	int a=15678,rem;
+	int sum=0,sum1=0;
+	while(a>0)
+	{
+	rem=a%10;
+	if(rem%2==0)
+	sum+=1;
+	else
+	sum1+=1;
+  a=a/10;
+	}
+	System.out.println("no of even digits=" +sum);
+	System.out.println("no of odd digits=" +sum1);
+	}
+}
+OUTPUT:
+no of even digits= 2
+no of odd  digits= 3
