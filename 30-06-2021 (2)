@@ -1,0 +1,25 @@
+import java.util.*;
+public class Harshednumber
+{
+	public static void main(String[] args) {
+	int rem,num;
+	int rev=0;
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	num=a;
+	while(a>0)
+	{
+	    rem=a%10;
+	    rev+=rem;
+	    a/=10;
+	}
+	if(num%rev==0)
+	System.out.println("Harshed number");
+	else
+	System.out.println("not a harshed number");
+
+	}
+}
+OUTPUT:
+153 
+Harshed number
