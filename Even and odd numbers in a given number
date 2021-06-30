@@ -1,0 +1,42 @@
+import java.io.*;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	 int a;
+	 Scanner sc=new Scanner(System.in);
+	 a=sc.nextInt();
+		int rem;
+		int num=0,num1=0;
+		int rem1,rem2;
+		int rev=0,rev1=0;
+		while(a>0)
+		{
+		    rem=a%10;
+		    if(rem%2==0)
+		    num=num*10+rem;
+		    else
+		    num1=num1*10+rem;
+		a/=10;
+		}
+		while(num>0)
+		
+		{
+			rem1=num%10;
+			rev=rev*10+rem1;
+			num/=10;
+		}
+		while(num1>0)
+		{
+		rem2=num1%10;
+		rev1=rev1*10+rem2;
+		num1/=10;
+		}
+		System.out.println("even number" +rev);
+		System.out.println("odd number" +rev1);
+		
+	}
+}
+OUTPUT:
+even number 24
+odd number 135
