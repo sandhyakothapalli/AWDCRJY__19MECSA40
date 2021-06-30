@@ -1,0 +1,36 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args)
+	{
+	int rev=0;
+	int rev1=0;
+	int rem,rem1;
+	Scanner sc=new Scanner(System.in);
+	int a=sc.nextInt();
+	int x=sc.nextInt();
+	int y=sc.nextInt();
+	while(a>0)
+	{
+	    rem=a%10;
+	    {
+	        if(rem==x)
+	        rem=y;
+	    }
+	    rev=rev*10+rem;
+	    a/=10;
+	}
+	while(rev>0)
+	{
+	    rem1=rev%10;
+	    rev1=rev1*10+rem1;
+	    rev/=10;
+	}
+	System.out.println("the number after changing"  +rev1);
+	}
+}
+OUTPUT:
+12234
+2
+6
+the number after changing16634
