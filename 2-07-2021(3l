@@ -1,0 +1,32 @@
+import java.util.*;
+class Automorphic
+{
+public static void main (String args[])
+{
+int n,square;
+int rem=0,rem1=0;
+Scanner sc =new Scanner(System.in);
+n=sc.nextInt();
+{
+square=n*n;
+}
+while(n>0)
+{
+rem=n%10;
+rem1=square%10;
+n/=10;
+square/=10;
+}
+if(rem==rem1)
+{
+System.out.println("automorphic");
+}
+else
+{
+System.out.println("not a automorphic");
+}
+}
+}
+Output:
+n=25
+Automorphic
