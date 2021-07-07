@@ -1,0 +1,28 @@
+import java.util.*; 
+class Leftrightindex
+{ 
+public static void main(String args[]) 
+{ 
+int n,sum=0;
+Scanner sc=new Scanner(System.in); 
+System.out.println("enter the size"); 
+n=sc.nextInt(); 
+int a[]=new int[n]; 
+System.out.println("enter the values"); 
+for(int i=0;i<n;i++) 
+a[i]=sc.nextInt(); 
+for(int i=0;i<n;i++)
+{
+for(int j=0;j<=i;j++)
+{
+sum+=a[j];
+}
+}
+System.out.println("the sum of running array is" +sum);
+
+}
+}
+OUTPUT:
+enter the size 5
+enter the values 1 2 3 4 5
+The sum of running array is 35
