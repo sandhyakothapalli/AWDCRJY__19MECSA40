@@ -1,0 +1,71 @@
+import  java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	int r=sc.nextInt();
+	int c=sc.nextInt();
+	 System.out.println("BEFORE SWAPPING ");
+	int A[][]=new int[r][c];
+	int B[][]=new int[r][c];
+	int C[][]=new int[r][c];
+	 System.out.println("A MATRIX ");
+	for(int i=0;i<r;i++)
+	for(int j=0;j<c;j++)
+	A[i][j]=sc.nextInt();
+	 System.out.println("B MATRIX ");
+	for(int i=0;i<r;i++)
+	for(int j=0;j<c;j++)
+	B[i][j]=sc.nextInt();
+	for(int i=0;i<r;i++)
+	{
+	for(int j=0;j<c;j++)
+	{
+	   C[i][j]=A[i][j];
+	}
+	}
+	 System.out.println("AFTER SWAPPING ");
+	  System.out.println("A MATRIX ");
+	for(int i=0;i<r;i++)
+	{
+	for(int j=0;j<c;j++)
+	{
+	    A[i][j]=B[i][j];
+	   System.out.print(A[i][j]+" ");
+	}
+	System.out.println();
+	}
+	 System.out.println("B MATRIX ");
+	for(int i=0;i<r;i++)
+	{
+	for(int j=0;j<c;j++)
+	{
+	    B[i][j]=C[i][j];
+	   System.out.print(B[i][j]+" ");
+	}
+	System.out.println();
+	}
+	}
+}
+	
+OUTPUT;
+3
+3
+BEFORE SWAPPING 
+A MATRIX 
+1  2 3
+4  5 6
+7  8 9
+B MATRIX 
+7 8 9
+5 6 8
+7 9 0
+AFTER SWAPPING 
+A MATRIX 
+7 8 9 
+5 6 8 
+7 9 0 
+B MATRIX 
+1 2 3 
+4 5 6 
+7 8 9 
