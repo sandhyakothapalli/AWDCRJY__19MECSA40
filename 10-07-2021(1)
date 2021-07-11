@@ -1,0 +1,21 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	Scanner sc=new Scanner(System.in);
+	String  str=sc.next();
+    	 System.out.println("the upper case");
+	    System.out.println (str.toUpperCase());
+	     System.out.println("the lower case");
+	    System.out.println( str.toLowerCase());
+	    
+	}
+	
+}
+OUTPUT;
+aditya
+the upper case
+ADITYA
+the lower case
+aditya
