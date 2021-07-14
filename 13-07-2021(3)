@@ -1,0 +1,29 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    int count=0;
+	    Scanner s=new Scanner(System.in);
+	    String str=s.nextLine();
+	    String st[ ]=str.split(" ");
+	    String st2="";
+	    for(String i:st)
+	    {
+	        if(i.compareTo(" ")>0)
+	        st2=st2+i+" ";
+	    }
+	    String st3[]=st2.split(" ");
+	    for(int i=0;i<st3.length;i++)
+	    {
+	        count+=1;
+	    }
+	   
+	   	   
+	    System.out.println("the no of words in string" +count);
+	    
+	    
+	}
+}
+output:
+this is  coding class                   
+the no of words in string 4
