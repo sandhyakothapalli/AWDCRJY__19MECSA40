@@ -1,0 +1,30 @@
+import java.util.*;
+class Fac
+{
+    public void display()
+    {
+        int fact=1;
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        for(int i=n;i>1;i--)
+        {
+            fact=fact*i;
+        }
+        System.out.println("the  factorial of number" +fact);
+    }
+    public void show()
+    {
+        display();
+    }
+}
+public class Main
+{
+	public static void main(String[] args) {
+	    {
+	        Fac obj=new Fac();
+	        obj.show();
+	    }
+	}
+  output:
+  5
+the  factorial of number 120
