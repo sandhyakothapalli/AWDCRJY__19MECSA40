@@ -1,0 +1,28 @@
+class Solution {​​​​​​​ 
+    public int[] sortArrayByParityII(int[] nums) {​​​​​​​ 
+ArrayList<integer> even=new ArrayList<integer>();
+ArrayList<integer> odd=new ArrayList<integer>();
+for(int i=0;i<nums.length;i++)
+{
+	if(nums[i]%2==0)
+	even.add(nums[i]);
+	else
+       odd.add(nums[i]);
+  }
+  int i=0;
+  for(integer val:even)
+  {
+  	nums[i]=val;
+  	i+=2;
+  }
+  int i=1;
+  for(integer val:odd)
+  {
+  	nums[i]=val;
+  	i+=2;
+  }
+  return nums;
+  }
+  }
+OUTPUT:
+2 3 8 7 4
