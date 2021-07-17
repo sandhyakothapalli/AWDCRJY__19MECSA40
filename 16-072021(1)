@@ -1,0 +1,49 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc= new Scanner(System.in);
+	    System.out.println("the size of vector");
+	    int n=sc.nextInt();
+	     System.out.println("the element to replace");
+	     int m=sc.nextInt();
+	     System.out.println("the element to be updated ");
+	     int p=sc.nextInt();
+	    Vector<Integer> v=new Vector<Integer>();
+	    System.out.println("the elements in vector ");
+	    for(int i=0;i<n;i++)
+	    {
+	        v.add(sc.nextInt());
+	    }
+	    if(v.contains(m))
+	    {
+	        int ind=v.indexOf(m);
+	        v.set(ind,p);
+	        for(int i=0;i<n;i++)
+	        {
+	            System.out.print(v.get(i)+ " ");
+	        }
+	        
+	    }
+	    else
+	   {
+	       System.out.println("false");
+	   }
+	  
+	
+	}
+}
+OUTPUT:
+
+    the size of vector
+5
+the element to replace
+33
+the element to be updated 
+99
+the elements in vector 
+5 33 7 8 90
+5 99 7 8 90 
+
+	
+
