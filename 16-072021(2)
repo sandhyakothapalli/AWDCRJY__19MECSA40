@@ -1,0 +1,42 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc= new Scanner(System.in);
+	    System.out.println("the size of linkedlist");
+	    int n=sc.nextInt();
+	     System.out.println("the element to search");
+	     int m=sc.nextInt();
+	    LinkedList <Integer> v=new LinkedList <Integer>();
+	    System.out.println("the elements in linkedlist ");
+	    for(int i=0;i<n;i++)
+	    {
+	        v.add(sc.nextInt());
+	    }
+	    if(v.contains(m))
+	    {
+	        int ind=v.indexOf(m);
+	        v.remove(ind);
+	            System.out.print(v + " ");
+	        
+	        
+	    }
+	    else
+	   {
+	       System.out.println("element is not found");
+	   }
+	  
+	
+	}
+}
+
+ OUTPUT:   
+the size of linkedlist
+5
+the element to search
+6
+the elements in linkedlist 
+4 6  99 8 8
+[4, 99, 8, 8] 
+	
+
