@@ -1,0 +1,30 @@
+class MyHashSet {
+
+    /** Initialize your data structure here. */
+    HashSet<Integer>h;
+    public MyHashSet() {
+        h=new  HashSet<Integer>();
+    }
+    
+    public void add(int key) {
+        h.add(key);
+    }
+    
+    public void remove(int key) {
+        h.remove(key);
+    }
+    
+    /** Returns true if this set contains the specified element */
+    public boolean contains(int key) {
+       return h.contains(key);
+    }
+
+}
+output:
+Your input
+["MyHashSet","add","add","contains","contains","add","contains","remove","contains"]
+[[],[1],[2],[1],[3],[2],[2],[2],[2]]
+Output
+[null,null,null,true,false,null,true,null,false]
+Expected
+[null,null,null,true,false,null,true,null,false]
