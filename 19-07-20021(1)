@@ -1,0 +1,120 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   Scanner sc=new Scanner(System.in);
+	   Map<Integer,Integer> h =new HashMap<> ();
+	   int opt;
+	   do
+	   {
+	       System.out.println("1-adding the key and values");
+	    	System.out.println("2-printing the value of key");
+	    	System.out.println("3-printing the size");
+	    	System.out.println("4-removing tthe valueof a key");
+	    	System.out.println("5-exit");
+	    	System.out.println("enter an option");
+	    	 opt=sc.nextInt();
+	    	switch(opt)
+	    	{
+	    	    case 1: System.out.println("enter the key");
+	    	    int x=sc.nextInt();
+	    	    System.out.println("enter the value");
+	    	    int y=sc.nextInt();
+	    	    h.put(x,y);
+	    	    break;
+	    	    case 2: System.out.println("enter the key");
+	    	    int k=sc.nextInt();
+	    	    if(h.containsKey(k))
+	    	    {
+	    	        System.out.println((h.get(k))+ "the valueof key");
+	    	    }
+	    	    else
+	    	    {
+	    	        System.out.println("-1");
+	    	    }
+	    	    break;
+	    	    case 3: System.out.println((h.size())+ "size of map");
+	    	    break;
+	    	    case 4: System.out.println("enter the key");
+	    	    int v=sc.nextInt();
+	    	    h.remove(v);
+	    	    break;
+	    	    case 5: System.exit(0);
+	    	    break;
+	    	    default: System.out.println("invalid option");
+	    	}
+	   }
+	   while(opt<=5);
+	    	    
+	    	
+	}
+}
+output:
+1-adding the key and valuues
+2-printing the valuue of key
+3-printing the size
+4-removing tthe valueof a key
+5-exit
+entter an option
+1
+enter the key
+1
+enter the value
+10
+1-adding the key and valuues
+2-printing the valuue of key
+3-printing the size
+4-removing tthe valueof a key
+5-exit
+entter ann opon
+1 
+enter the key
+2 
+enter the value
+20
+1-adding the key and valuues
+2-printing the valuue of key
+3-printing the size
+4-removing tthe valueof a key
+5-exit
+entter an option
+1
+enter the key
+
+3
+enter the value
+30 
+1-adding the key and values
+2-printing the valuue of key
+3-printing the size
+4-removing the valueof a key
+5-exit
+entter an option
+2
+enter the key
+2
+20the valueof key
+1-adding the key and valuues
+2-printing the valuue of key
+3-printing the size
+4-removing tthe valueof a key
+5-exit
+entter an option
+3
+3
+1-adding the key and valuues
+2-printing the valuue of key
+3-printing the size
+4-removing tthe valueof a key
+5-exit
+entter an option
+4
+enter the key
+3
+1-adding the key and valuues
+2-printing the valuue of key
+3-printing the size
+4-removing tthe valueof a key
+5-exit
+entter an option
+5
