@@ -1,0 +1,50 @@
+import java.util.*;
+import java.util.Stack;
+public class Main
+{
+    static Stack<Integer> st=new Stack<Integer>();
+    static Stack<Integer> st1=new Stack<Integer>();
+	public static void main(String[] args) {
+	  Scanner sc=new Scanner(System.in);
+	  int count=0;
+	  int count1=0;
+	  System.out.println("enter the size of array");
+	  int n=sc.nextInt();
+	  if(n%2==0)
+	  {
+	  System.out.println("enter the elements of array");
+	  int a[]=new int[n];
+	  for(int i=0;i<n;i++)
+	  a[i]=sc.nextInt();
+	  for(int i=0;i<n;i++)
+	    st.push(a[i]);
+	  for(int i=0;i<n;i++)
+	  {
+	    if(a[i]%2==0)
+	    {
+	        count+=1;
+	    }
+	    else
+	    {
+	        count1+=1;
+	    }
+	  }
+	  if(count==count1)
+	  {
+	    System.out.println("stack is balanced");
+	  }
+	  
+	}
+	    else
+	    {
+	         System.out.println("stack is unbalanced");
+	    }
+	    
+	}
+}
+output:
+enter the size of array
+6 
+enter the elements of array
+4 5 6 7 8 9
+stack is balanced
