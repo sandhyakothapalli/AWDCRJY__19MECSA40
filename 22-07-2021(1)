@@ -1,0 +1,49 @@
+class MyQueue {
+        Stack<Integer> stack;
+        Stack<Integer> revStack;
+    /** Initialize your data structure here. */
+    public MyQueue() {
+         stack=new Stack<>();
+         revStack=new Stack<>();
+    }
+    
+    /** Push element x to the back of queue. */
+    public void push(int x) {
+        stack.push(x);
+    }
+    
+    /** Removes the element from in front of queue and returns that element. */
+    public int pop() {
+      while(!stack.isEmpty())
+      {
+          revStack.push(stack.pop());
+      }
+        int num=revStack.pop();
+        while(!revStack.isEmpty())
+        {
+            stack.push(revStack.pop());
+        }
+        return num;
+    }
+    
+    /** Get the front element. */
+    public int peek() {
+        while(!stack.isEmpty())
+        {
+            revStack.push(stack.pop());
+        }
+        int  num=revStack.peek();
+         while(!revStack.isEmpty())
+         {
+             stack.push(revStack.pop());
+         }
+        return num;
+    }
+    
+    /** Returns whether the queue is empty. */
+    public boolean empty() {
+        {
+            return stack.isEmpty();
+        }
+    }
+}
