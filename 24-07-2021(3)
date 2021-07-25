@@ -1,0 +1,26 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner  sc=new Scanner(System.in);
+		System.out.println("enter the first string");
+		String s1=sc.nextLine();
+			System.out.println("enter the second string");
+		String s2=sc.nextLine();
+		String s3="";
+		s3=s1+s2;
+		String st="";
+		char ch[]=s3.toCharArray();
+		for(int i=ch.length-1;i>=0;i--)
+		{
+		    st+=ch[i];
+		}
+		System.out.println("resultant string= " +st);
+	}
+}
+output:
+enter the first string
+practice
+enter the second string
+geeks
+resultant string= skeegecitcarp
