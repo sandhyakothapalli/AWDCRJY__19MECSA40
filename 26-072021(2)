@@ -1,0 +1,27 @@
+class Solution {
+    public int trailingZeroes(int n) {
+        int fact=1;
+		int count=0;
+		int rem,rev;
+		for(int i=n;i>1;i--)
+		{
+		    fact*=i;
+		}
+		while(fact>0)
+		{
+		    rem=fact%10;
+		    rev=rem;
+		    {
+		    if(rev==0)
+		    count+=1;
+		    }
+		    fact=fact/10;
+		}
+		if(count==0)
+		return 0;
+		else 
+		return count;      
+	}
+}
+
+    
