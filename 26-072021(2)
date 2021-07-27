@@ -15,7 +15,6 @@ class Solution {
 		    if(rev==0)
 		    count+=1;
 		    }
-		    fact=fact/10;
 		}
 		if(count==0)
 		return 0;
