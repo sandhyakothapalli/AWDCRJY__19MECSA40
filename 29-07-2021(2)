@@ -1,0 +1,59 @@
+import java.util.*;
+public class Main
+{
+static int N=2000005;
+public static int prime[]=new int[N];
+public static int arr[]=new int[N];
+public static void sieve()
+{
+for(int i=0;i<N;i++)
+{
+prime[i]=1;
+}
+prime[0]=0;
+prime[1]=0;
+for(int i=2;i*i<N;i++)
+{
+if(prime[i]==1)
+{
+for(int j=i*i;j<N;j=j+i)
+{
+prime[j]=0;
+}
+}
+}
+int k=0;
+for(int i=0;i<N;i++)
+{
+if(prime[i]==1){
+arr[k]=i;
+k++;
+}
+}
+}
+public static void main(String[] args) {
+int n;
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+int flag=0;
+sieve();
+for (int i = 0; i < n; i++)
+{
+if ((prime[i]==1) && (prime[n - i]==1))
+{
+   flag=1;
+}
+}
+if(flag==1)
+{
+	System.out.println("Deepa");
+}
+else
+{
+	System.out.println("arjit");
+}
+}
+}
+Output:
+3
+arjit
