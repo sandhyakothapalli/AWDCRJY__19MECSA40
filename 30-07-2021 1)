@@ -1,24 +1,80 @@
 import java.util.*;
-import java.lang.*;
-class Solution {
-    public static boolean isUgly(int n) {
-        if(n<=0)
-            return false;
-        while(n%2==0)
-            return true;
-        while(n%3==0)
-            return true;
-        while(n%5==0)
-            return true;
-        if(n==1)
-            return true;
-        else 
-            return false;
-    }
-    public static void main(String args[])
+public class Main
+{
+	static int N=2000005;
+public static int prime[]=new int[N];
+public static int arr[]=new int[N];
+public static void sieve()
+{
+for(int i=0;i<N;i++)
+{
+prime[i]=i;
+}
+prime[0]=1;
+prime[1]=1;
+for(int i=2;i*i<N;i++)
+{
+if(prime[i]==i)
+{
+for(int j=i*i;j<N;j=j+i)
+{
+prime[j]=i;
+}
+}
+}
+}
+public static void main(String[] args) {
+int n;
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+int k=0;
+int count=0;
+int x;
+int n1=n;
+int count1=0;
+int arr[]=new int[n];
+sieve();
+if(n==1)
+{
+    System.out.println("true");
+}
+while(n!=1)
+{
+	x=prime[n];
+	{
+    if((x==2) || (x==3) || (x==5))
     {
-        Scanner sc=new Scanner(System.in);
-    int n=sc.nextInt();
-    System.out.println(isUgly(n));
+        count+=1;
+    }
+    else
+    {
+      count1+=1;
+    }
+	}
+	arr[k]=x;
+	k++;
+	n=n/prime[n];
+}
+while(n1!=1)
+{
+if(count1==0)
+{
+    System.out.println("true");
+    break;
+}
+else
+{
+    System.out.println("false");
+    break;
 }
 }
+	}
+}
+output:
+1
+true
+12
+true
+7
+false
+
