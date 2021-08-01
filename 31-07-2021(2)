@@ -1,0 +1,60 @@
+import java.util.*;
+public class Main
+{
+	static int N=2000005;
+public static int prime[]=new int[N];
+public static int arr[]=new int[N];
+public static void sieve()
+{
+for(int i=0;i<N;i++)
+{
+prime[i]=1;
+}
+prime[0]=0;
+prime[1]=0;
+for(int i=2;i*i<N;i++)
+{
+if(prime[i]==1)
+{
+for(int j=i*i;j<N;j=j+i)
+{
+prime[j]=0;
+}
+}
+}
+}
+public static void main(String[] args) {
+int n;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter how many numbers");
+n=sc.nextInt();
+int count=0;
+int max=Integer.MIN_VALUE;
+sieve();
+System.out.println("enter the numbers");
+for(int i=0;i<n;i++)
+{
+   int a=sc.nextInt();
+if(prime[a]==1 && a>max)
+    count+=1;
+max=a;
+}
+if(count==0)
+{
+    System.out.println("false");
+}
+else
+{
+   System.out.println(max);
+}
+	}
+}
+output:
+enter how many numbers
+4
+enter the numbers
+89
+6
+3
+7
+max=7
