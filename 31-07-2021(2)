@@ -11,7 +11,7 @@ for(int i=0;i<N;i++)
 prime[i]=1;
 }
 prime[0]=0;
-prime[1]=0;
+prime[1]=10;
 for(int i=2;i*i<N;i++)
 {
 if(prime[i]==1)
@@ -25,6 +25,7 @@ prime[j]=0;
 }
 public static void main(String[] args) {
 int n;
+int a;
 Scanner sc=new Scanner(System.in);
 System.out.println("enter how many numbers");
 n=sc.nextInt();
@@ -32,23 +33,26 @@ int count=0;
 int max=Integer.MIN_VALUE;
 sieve();
 System.out.println("enter the numbers");
-for(int i=0;i<n;i++)
+    for(int i=0;i<n;i++)
 {
-   int a=sc.nextInt();
-if(prime[a]==1 && a>max)
-    count+=1;
+    a=sc.nextInt();
+if(prime[a]==1)
+{
+    if(a>=max)
 max=a;
-}
-if(count==0)
-{
-    System.out.println("false");
 }
 else
 {
-   System.out.println("max" +max);
+    count+=1;
 }
+}
+if(count<n)
+System.out.println("max" +max);
+else
+System.out.println("false");
 	}
 }
+
 output:
 enter how many numbers
 4
@@ -57,4 +61,4 @@ enter the numbers
 6
 3
 7
-max=7
+max=89
