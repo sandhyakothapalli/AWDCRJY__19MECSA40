@@ -1,0 +1,73 @@
+import java.util.*;
+public class Main
+{
+public static void main(String args[]){
+int n;
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the array size");
+n=sc.nextInt();
+int arr[]=new int[n];
+System.out.println("enter the array elements");
+for(int i=0;i<n;i++)
+{
+arr[i]=sc.nextInt();
+}
+int prefix[]=new int[n];
+prefix[0]=arr[0];
+for(int i=1;i<n;i++)
+{
+prefix[i]=prefix[i-1]+arr[i];
+}
+int l,r;
+System.out.println("enter the left index");
+l=sc.nextInt();
+System.out.println("enter the right index");
+r=sc.nextInt();
+System.out.println("the sum of indexes");
+if(l==0)
+System.out.println(prefix[r]);
+else
+System.out.println(prefix[r]-prefix[l-1]);
+int a,b,x;
+System.out.println("enter the update left index");
+a=sc.nextInt();
+System.out.println("enter the update right index");
+b=sc.nextInt();
+System.out.println("enter the update value");
+x=sc.nextInt();
+for(int i=a;i<=b;i++)
+{
+    arr[i]=arr[i]+x;
+}
+prefix[0]=arr[0];
+for(int i=1;i<n;i++)
+{
+prefix[i]=prefix[i-1]+arr[i];
+}
+System.out.println("sum affter  updatiing indexes");
+if(l==0)
+System.out.println(prefix[l]);
+else
+System.out.println(prefix[r]-prefix[l-1]);
+}
+}
+output;
+enter the array size
+6
+enter the array elements
+1 3 5 7 9 11
+enter the left index
+1
+enter the right index
+3
+the sum of indexes
+15
+enter the update left index
+1
+enter the update right index
+5
+enter the update value
+10
+sum affter  updatiing indexes
+45
+                            
