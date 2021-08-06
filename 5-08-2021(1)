@@ -1,0 +1,24 @@
+class Solution {
+    public int minSubArrayLen(int target, int[] nums) {
+        int min=Integer.MAX_VALUE;
+        int s=0;
+        int res=Integer.MAX_VALUE;
+        int a=0;
+        for(int i=0;i<nums.length;i++) 
+            {
+            s+=nums[i];
+            while(s>=target) 
+                {
+                res=Math.min(res,i-a+1) ;
+                s-=nums[a];
+                a++;
+           
+               }
+            }
+        if(res==Integer.MAX_VALUE) 
+            return 0;
+        return res;
+
+        
+    }
+}
