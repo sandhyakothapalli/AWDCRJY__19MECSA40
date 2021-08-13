@@ -1,0 +1,31 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	   Scanner s=new Scanner(System.in);
+     System.out.println("enter n value");
+	   int a=s.nextInt();
+	    funA(1,a);
+	}
+	static void funA(int n,int a)
+	{
+	    if(n<=a)
+	    {
+	        System.out.print(n+ " ");
+	        funB(n+1,a);
+	    }
+	}
+	static void funB(int n,int a)
+	{
+	     if(n<=a)
+	    {
+	        System.out.print(n+ " ");
+	        funA(n+1,a);
+	    }
+	}
+	
+	
+}
+OuTput:
+enter n value:10
+1 2 3 4 5 6 7 8 9 10 
