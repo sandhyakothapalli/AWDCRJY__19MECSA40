@@ -1,0 +1,27 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner c=new Scanner(System.in);
+		System.out.println("enter the number");
+		int n= c.nextInt();
+		int rem=0;
+		sum(n,rem);
+		int res=sum(n,rem);
+		System.out.println("sum of digits of  " +n+ "is  " +res);
+	}
+	public static int sum(int n,int rem)
+	{
+	if(n==0)
+	return 0;
+	if(n==1)
+	return 1;
+	else
+    rem=n%10;
+	return (rem+sum((n/10),rem));
+	}
+}
+output:
+enter the number
+67
+sum of digits of  67is  13
