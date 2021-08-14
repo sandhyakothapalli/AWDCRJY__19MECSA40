@@ -1,0 +1,24 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner c=new Scanner(System.in);
+		System.out.println("enter the number");
+		int n= c.nextInt();
+		fac(n);
+		int res=fac(n);
+		System.out.println("fatorial of " +n+ " " +res);
+	}
+	public static int fac(int n)
+	{
+	    if(n==0)
+	    return 1;
+	    if(n==1)
+	    return 1;
+	    return(n*fac(n-1));
+	}
+}
+output:
+enter the number
+9
+fatorial of 9 362880
